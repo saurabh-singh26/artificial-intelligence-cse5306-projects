@@ -1,0 +1,25 @@
+Let say the max player for game state is 1.
+Initial score for both the player is 0.
+
+The scores for quadruple have been defined as follows:
+1000 & 2000: +1
+1100 & 2200: +2
+1110 & 2220: +3
+
+The function searches for the above strings  in the game state in following order. Eg:
+First search is for (1110, 2220)
+Second search is for (1100, 2200)
+Third search is for (1000, 2000)
+If any search is successful, the player is assigned the score mentioned above and no further search is done for that particular player. All the 3 searches are done until both the players have been assigned some score.
+
+Then the evalFunction returns the following score:
+Score of player 1 - Score of player 2
+
+Example 1: Eval Score = 3
+Player 1: 3 (1110 is surely present; 1100 & 1000 may be present or may be not)
+Player 2: 0 (No chance for player 2 to complete its quadruple)
+
+Example 2: Eval Score = 2
+Player 1: 3 (1110 is surely present; 1100 & 1000 may be or may be not)
+Player 2: 1 (2000 is present atleast one time)
+
